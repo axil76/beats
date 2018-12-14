@@ -1,0 +1,11 @@
+module_version: "1.0"
+
+var:
+  - name: paths 
+    default:
+      - "C:/Program Files/Update Services/LogFiles/*.log*"    
+    os.windows:
+      - "C:/Program Files/Update Services/LogFiles/*.log*"      
+
+ingest_pipeline: ingest/wsus-pipeline.json
+input: config/wsus-log.yml
