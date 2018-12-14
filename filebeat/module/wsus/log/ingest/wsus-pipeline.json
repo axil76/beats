@@ -4,7 +4,7 @@
     "grok": {
       "field": "message",
       "patterns":[
-        "%{TIMESTAMP_ISO8601:wsus.log.time} (%{WORD:wsus.utc.time})+\s(%{WORD:wsus.message.status})+\s(%{WORD:wsus.soft.name}).(%{WORD:wsus.soft.error})+\s(.*)"
+        "%{TIMESTAMP_ISO8601:wsus.log.time}\s(%{WORD:wsus.utc.time})\t(%{WORD:wsus.message.status})\s(%{WORD:wsus.soft.name}).(%{WORD:wsus.soft.error}).*(%{WORD:wsus.message.all})"
       ],
       "ignore_missing": true
     }
